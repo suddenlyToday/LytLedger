@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ledger</string>
+    <string name="btn_income_str">in</string>
+    <string name="btn_payout_str">out</string>
+    <string name="income_tag">+</string>
+    <string name="payouy_tag">-</string>
+    <string name="today_str">today</string>
+    <string name="this_month_str">this month</string>
+    <string name="this_year_str">this year</string>
+    <string name="moneyHeader">money</string>
+    <string name="pls_input_money_num">input number</string>
+    <string name="click_add_desc">input notes</string>
+    <string name="cancel">cancel</string>
+    <string name="save">save</string>
+    <string name="edit_record">edit</string>
+    <string name="delete_record">delete</string>
+</resources>

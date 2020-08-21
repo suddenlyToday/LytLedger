@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_income_str">进</string>
+    <string name="btn_payout_str">出</string>
+    <string name="app_name">纯账本</string>
+    <string name="payouy_tag">-</string>
+    <string name="income_tag">+</string>
+    <string name="this_year_str">本年</string>
+    <string name="this_month_str">本月</string>
+    <string name="today_str">今天</string>
+    <string name="moneyHeader">数目</string>
+    <string name="pls_input_money_num">输入数字</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="click_add_desc">输入备注</string>
+    <string name="edit_record">编辑</string>
+    <string name="delete_record">删除</string>
+</resources>

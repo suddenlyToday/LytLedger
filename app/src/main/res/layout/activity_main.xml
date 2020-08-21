@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qmuiteam.qmui.layout.QMUIConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:id="@+id/statisticsDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/lineOfStatistics"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/dayHeaderTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:text="@string/today_str" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/dayIncomeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/dayPayoutTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+            </com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout>
+
+            <com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/monthHeaderTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:text="@string/this_month_str" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/monthIncomeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/monthPayoutTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+            </com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout>
+
+            <com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/yearHeaderTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:text="@string/this_year_str" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/yearIncomeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+
+                <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                    android:id="@+id/yearPayoutTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp" />
+            </com.qmuiteam.qmui.layout.QMUIPriorityLinearLayout>
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+        <View
+            android:id="@+id/lineOfStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/qmui_skin_support_color_separator_darken"
+            app:layout_constraintTop_toBottomOf="@+id/statisticsDiv" />
+
+        <com.qmuiteam.qmui.widget.pullLayout.QMUIPullLayout
+            android:id="@+id/pull_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/qmui_skin_support_color_background"
+            app:layout_constraintBottom_toTopOf="@+id/lineOfBtnDiv"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineOfStatistics">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:qmui_is_target="true" />
+
+            <com.qmuiteam.qmui.widget.pullLayout.QMUIPullRefreshView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:qmui_action_view_init_offset="-20dp"
+                app:qmui_can_over_pull="true"
+                app:qmui_need_receive_fling_from_target_view="false"
+                app:qmui_pull_edge="top"
+                app:qmui_pull_rate="0.45"
+                app:qmui_target_view_trigger_offset="wrap" />
+
+            <com.qmuiteam.qmui.widget.pullLayout.QMUIPullLoadMoreView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:qmui_action_view_init_offset="0dp"
+                app:qmui_can_over_pull="true"
+                app:qmui_need_receive_fling_from_target_view="true"
+                app:qmui_pull_edge="bottom"
+                app:qmui_pull_rate="0.45"
+                app:qmui_target_view_trigger_offset="wrap" />
+        </com.qmuiteam.qmui.widget.pullLayout.QMUIPullLayout>
+
+        <View
+            android:id="@+id/lineOfBtnDiv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/qmui_skin_support_color_separator_darken"
+            app:layout_constraintBottom_toTopOf="@+id/btnDiv" />
+
+        <com.qmuiteam.qmui.layout.QMUIFrameLayout
+            android:id="@+id/btnDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.qmuiteam.qmui.layout.QMUIButton
+                android:id="@+id/btn_payout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:onClick="addPayout"
+                android:text="@string/btn_payout_str"
+                app:qmui_isRadiusAdjustBounds="true" />
+
+            <com.qmuiteam.qmui.layout.QMUIButton
+                android:id="@+id/btn_income"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:onClick="addIncome"
+                android:text="@string/btn_income_str" />
+        </com.qmuiteam.qmui.layout.QMUIFrameLayout>
+
+    </com.qmuiteam.qmui.layout.QMUIConstraintLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout2>
